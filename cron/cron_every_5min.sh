@@ -1,0 +1,1 @@
+/usr/bin/php -q /home/pi/www/kassa/public/index.php > /home/pi/www/kassa/tmp/cron.log
