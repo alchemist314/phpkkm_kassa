@@ -10,6 +10,5 @@
 
 Если для хранения заданий будет использоваться MySQL или SQLite запустите соответствующий скрипт из папки /<a href="https://github.com/alchemist314/phpkkm_kassa/tree/master/install" target="blank">install</a>
 
-Файл запуска программы находится в папке /public/index.php, лучше всего его запускать по крону каждые 5 минут, в этом случае скрипт будет отслеживать состояние смены и закрывать ее автоматически:
-<br>https://github.com/alchemist314/phpkkm_kassa/blob/master/public/index.php
+Файл запуска программы находится в папке <a href="https://github.com/alchemist314/phpkkm_kassa/blob/master/public/index.php" target="blank">/public/index.php</a>, лучше всего его запускать по крону каждые 5 минут, в этом случае скрипт будет отслеживать состояние смены и закрывать ее автоматически.
 
