@@ -3,7 +3,7 @@
 Программа предназначена для организации работы с онлайн-кассами.
 <br>Скрипт забирает задания от <a href="https://github.com/alchemist314/phpkkm_kassa_tasks" target="blank">платежного сервера</a> и отправляет на ККМ.
 
-Поддерживается работа напрямую с кассой, Web сервером АТОЛ, KKM сервером.
+Поддерживается работа напрямую с кассой, <a href="https://app.swaggerhub.com/apis-docs/atol-dev/fptr-web-server/" target="blank">Web сервером АТОЛ, <a href="https://kkmserver.ru/KkmServer" target="blank">KKM сервером</a>.
 <br>Для работы напрямую с кассой необходим установленный драйвер АТОЛ.
 
 Перед запуском отредактируйте файл конфигурации Config.php:
