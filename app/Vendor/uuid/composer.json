@@ -1,0 +1,25 @@
+{
+  "name": "lootils/uuid",
+  "type": "library",
+  "description": "A simple class for working with UUIDs.",
+  "keywords": ["uuid"],
+  "homepage": "https://github.com/lootils/lootils-uuid",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matt Farina",
+      "email": "matt@mattfarina.com",
+      "homepage": "http://mattfarina.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "*",
+    "satooshi/php-coveralls": "0.6.*"
+  },
+  "autoload": {
+    "psr-0": { "Lootils\\Uuid": "src/" }
+  }
+}
