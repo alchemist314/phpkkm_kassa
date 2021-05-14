@@ -1,4 +1,5 @@
 <?php
+
 switch($_REQUEST['exec']) {
     case 'cron':
 	$sVal='cron';
@@ -7,5 +8,6 @@ switch($_REQUEST['exec']) {
 	$sVal='direct';
 	break;
 }
-    exec("/usr/bin/sudo /var/www/html72/KASSA_RELEASE/25.05.2019/kassa/public/exec.sh ".$sVal, $aOut);
+exec("/usr/bin/sudo /var/www/html/kassa/public/exec.sh ".$sVal, $aOut);
+
 ?>

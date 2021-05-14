@@ -6,7 +6,8 @@ ini_set("display_errors", 0);
 setlocale(LC_ALL, "ru_RU.utf8");
 
 // Путь до корня программы
-define ('PHPKKM_ROOT', '/var/www/kassa');
+//define ('PHPKKM_ROOT', '/var/www/kassa');
+define ('PHPKKM_ROOT', '/home/PHP/KASSA_RELEASE/08.05.2021/kassa');
 
 // Ссылка на папку с начальным скриптом index.php (используется для vlog.html)
 define ('PHPKKM_ROOT_HTTP', 'https://127.0.0.1/kassa/public');

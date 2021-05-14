@@ -19,6 +19,9 @@ require_once(PHPKKM_ROOT.'/app/Functions/fFunctions.php');
 // Инициализируем обьекты
 require_once PHPKKM_ROOT.'/app/Includes/init.php';
 
+// Подключаем сторонние библиотеки
+require_once PHPKKM_ROOT.'/app/Vendor/uuid/src/Lootils/Uuid/Uuid.php';
+
 // Получаем время предыдущего запуска скрипта
 $vKKMTime = cKKMModel::fKKMGetTime();
 if (preg_match("/[0-9]/", $vKKMTime)) {
@@ -37,7 +40,6 @@ if (preg_match("/run/", $vStatus)) {
 
     // Состояние смены: Проверка каждые 40 минут или по вызову платежного сервера
     if ($vScriptLastRunDiffMin>=0) {
-
 
 	// Блокируем кассу
 	cKKMModel::fKKMSetStatus("lock");
