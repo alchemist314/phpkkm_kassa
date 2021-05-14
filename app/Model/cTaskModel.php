@@ -259,8 +259,7 @@ class cTaskModel extends cModel {
 	    }
         }
 
-   //LOG
-	return $aWaitTasks;
+  	return $aWaitTasks;
     }
 
 
