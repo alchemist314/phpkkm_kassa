@@ -18,9 +18,9 @@ function fAutoload($vClassName) {
 /**
  * Функция fGuid генерирует UUID
  */
-/*
+
 function fGuid() {
     return \Lootils\Uuid\Uuid::createV4();
 }
-*/
+
 spl_autoload_register("fAutoload");
