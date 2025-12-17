@@ -28,12 +28,13 @@ define('PHPKKM_URL_KKM', 'http://127.0.0.1:16732');
 //-----------------------------------------------------------------------------
 // Указывается в случае использования JSONPROXY драйвера:
 
+define('PHPKKM_JSONPROXY_PATH', "/home/pi/Downloads/jsonproxy");
 // Путь до папки где расположен файл libfptr
-define('PHPKKM_JSONDRV_LIBFPTRPATH', "/home/pi/Downloads/jsonproxy/java/*");
+define('PHPKKM_JSONDRV_LIBFPTRPATH', PHPKKM_JSONPROXY_PATH."/java/*");
 // Путь до папки где лежит jsonproxy драйвер
-define('PHPKKM_JSONDRV_DIRPATH', "/home/pi/Downloads/jsonproxy/src");
+define('PHPKKM_JSONDRV_DIRPATH', PHPKKM_JSONPROXY_PATH."/src");
 // Команда для запуска jsonproxy драйвера
-define('PHPKKM_JSONDRV_EXEC', "/usr/bin/java -classpath .:".PHPKKM_LIBFPTR_PATH." proxydrv.proxydrv");
+define('PHPKKM_JSONDRV_EXEC', "/usr/bin/java -classpath .:".PHPKKM_JSONDRV_LIBFPTRPATH." proxydrv.proxydrv");
 //-----------------------------------------------------------------------------
 
 // Ссылка для получения заданий
@@ -106,7 +107,7 @@ define('PHPKKM_TASK_DELAY', 3);
 define('PHPKKM_SERVER_TIMEOUT', 120); 
 
 // Период (дней) за который будет формироваться список выполненных заданий и отправляться на платежный сервер
-define('PHPKKM_DAY_DELTA', 1); 
+define('PHPKKM_DAY_DELTA', 10); 
 
 // Фамилия кассира для отображения в чеке
 define('PHPKKM_OPERATOR_NAME', 'Иванов И.И.'); 
