@@ -177,8 +177,8 @@ class cConnectModel extends cModel {
 	    $oKKMData=json_decode($jKKMData);
 	    $jTaskBody=json_encode($oKKMData->request,JSON_UNESCAPED_UNICODE);
 	    $jTaskBody=str_replace("\"", "\\\"", $jTaskBody);
-	    chdir("/home/pi/atol/ATOL_10/src");
-	    $sStr="/usr/bin/java -classpath .:/home/pi/atol/ATOL_10/libfptr/* atol.Test \"".str_replace(array("\r", "\n"),"", $jTaskBody)."\"";
+	    chdir(PHPKKM_JSONDRV_DIRPATH);
+	    $sStr="/usr/bin/java -classpath .:".PHPKKM_JSONDRV_LIBFPTRPATH." proxydrv.proxydrv \"".str_replace(array("\r", "\n"),"", $jTaskBody)."\"";
 	    exec($sStr, $aOut);
 	    $jResult=$this->vTaskCurrentResult=$aOut[0];
 	    // Записываем результат задания
