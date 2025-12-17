@@ -27,8 +27,16 @@ class cKKMModel extends cModel {
             if (is_file($vFilePath)) {
                 $vRoutes=str_replace(".php", "", $aDir[$l]);
 		if ($vRoutes==$vTask) {
+			// Загружаем шаблон задания
+			$sTemplateCode=file_get_contents($vFilePath);
+			// Ищем и подставляем в fGuid() сгенерированный UUID
+			$sTemplateCode=preg_replace_callback('/fGuid\s*\(\s*\)/',
+				function($matches) {
+					return "'". fGuid() ."'";
+				}, $sTemplateCode);
+			$aTemplateData = eval("?>$sTemplateCode<?php ");
 		    // Загружаем исходник JSON задачи
-		    $aTaskBody=json_encode(include $vFilePath,JSON_UNESCAPED_UNICODE);
+		    $aTaskBody=json_encode($aTemplateData, JSON_UNESCAPED_UNICODE);
 		}
             }
         }
